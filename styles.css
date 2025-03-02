@@ -1,20 +1,25 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
-    transition: background 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
+    background: #007BFF;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    position: relative;
 }
 
 nav ul {
@@ -28,54 +33,153 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Dark Mode */
-.dark-mode {
-    background-color: #1e1e1e;
     color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.dark-mode header {
-    background-color: #333;
+/* Dark Mode Button */
+#dark-mode-toggle {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
 }
 
-.dark-mode nav ul li a {
-    color: #bbb;
+#dark-mode-toggle:hover {
+    background: #555;
 }
 
-/* Back-to-Top Button */
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.dark-mode main {
+    background: #1e1e1e;
+}
+
+/* Images */
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ad Section */
+.adsense {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.dark-mode .adsense {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+/* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
-    color: white;
+    background: #007BFF;
+    color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
-    display: none;
     border-radius: 5px;
+    display: none;
 }
 
 #back-to-top:hover {
     background: #0056b3;
 }
 
-/* Smooth Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Comment Section */
+#comment-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
 
-main {
-    width: 80%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+.dark-mode #comment-section {
+    background: #1e1e1e;
+}
+
+#comment-form input,
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dark-mode #comment-form input,
+.dark-mode #comment-form textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+#comment-form button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background: #0056b3;
+}
+
+#comments ul {
+    list-style: none;
+    padding: 0;
+}
+
+#comments li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dark-mode #comments li {
+    background: #222;
+    color: #fff;
+}
+
+.delete-comment {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
 }
