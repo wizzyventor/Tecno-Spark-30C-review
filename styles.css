@@ -1,21 +1,25 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
 header {
-    background: #007BFF;
+    background-color: #007bff;
     color: white;
-    padding: 15px 20px;
+    padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
@@ -28,30 +32,50 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode nav ul li a {
+    color: #bbb;
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
+
+#back-to-top:hover {
+    background: #0056b3;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 main {
     width: 80%;
     margin: 20px auto;
     background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
-
-.adsense {
-    text-align: center;
-    margin: 20px 0;
-    background: #ddd;
-    padding: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #007BFF;
-    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
